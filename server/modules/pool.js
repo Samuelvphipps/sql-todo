@@ -6,4 +6,4 @@ let pool = new pg.Pool({
 
 module.exports = pool;
 
-///environment variables
+//environment variables

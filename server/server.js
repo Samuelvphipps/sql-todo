@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config();  //needs to be first line
 const express = require('express');
 const bodyParser = require('body-parser');
 const pool = require('./modules/pool');
@@ -76,7 +76,19 @@ app.put('/tasks/:id', (req, res) => {
     });
 });
 
-const port = 3000;
+//process.env
+// console.log('process.env', process.env);
+
+//home directory is
+console.log('Your home directory is', process.env.HOME);
+
+console.log('your preferred port is:', process.env.PORT);
+
+console.log('my fav food is:', process.env.FAV_FOOD)
+
+//you can set variables before running code PORT=3000 npm start sets PORT variable to 3000
+
+const port = process.env.PORT || 3000; 
 
 console.log(`We're going to listen on port`, port);
 app.listen(port, () => {
