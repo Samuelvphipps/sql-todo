@@ -1,7 +1,9 @@
 const pg = require('pg');
 
 let pool = new pg.Pool({
-  database: "weekend-to-do-app"
+  database: "cloud_todo"
 });
 
 module.exports = pool;
+
+///environment variables
